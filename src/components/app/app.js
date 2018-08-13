@@ -5,6 +5,7 @@ import Landing from '../landing/landing';
 import Dashboard from '../dashboard/dashboard';
 import AuthRedirect from '../auth-redirect/auth-redirect';
 import Profile from '../profile/profile';
+import Navbar from '../navbar/navbar';
 
 export default class App extends React.Component {
   render() {
@@ -12,7 +13,7 @@ export default class App extends React.Component {
       <div className="app">
         <BrowserRouter>
           <div>
-            {/* <ProfileForm /> */}
+            <Navbar />
             <Route exact path="*" component={AuthRedirect} />
             <Route exact path="/" component={Landing} />
             <Route exact path="/signup" component={Landing} />
