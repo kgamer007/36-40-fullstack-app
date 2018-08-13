@@ -1,5 +1,6 @@
 import superagent from 'superagent';
 import * as routes from '../lib/routes';
+import { cookieDelete } from '../lib/utils';
 
 // These are sync action creators
 
@@ -34,4 +35,9 @@ export const userLogin = user => (store) => {
       console.log(response.body.token);
       return store.dispatch(setToken(response.body.token));
     });
+};
+
+export const logout = () => (store) => {
+  cookieDelete('cookieToken');
+  return store.dispatch(removeToken());
 };

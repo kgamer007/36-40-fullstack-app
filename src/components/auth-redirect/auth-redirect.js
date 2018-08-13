@@ -1,5 +1,3 @@
-// We are using this component to redirect any miscellaneous pathnames (i.e. "/foobar") to an appropriate component view instead of going to a blank page (which is the default action if we do not account for it)
-
 import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
