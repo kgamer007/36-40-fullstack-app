@@ -17,7 +17,7 @@ webpackConfig.output = {
 
 webpackConfig.plugins = [
   new HtmlWebpackPlugin({
-    title: '36-40 App',
+    title: '36-40 lab-37 cookies',
   }),
   new DefinePlugin({
     API_URL: JSON.stringify(process.env.API_URL),
