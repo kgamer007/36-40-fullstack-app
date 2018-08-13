@@ -16,13 +16,6 @@ export const removeToken = () => ({
 // These are async action creators
 
 export const userSignup = user => (store) => {
-  /*
-    {
-      username: 
-      email: 
-      password
-    }
-  */
   return superagent.post(`${API_URL}${routes.SIGNUP_ROUTE}`)
     .send(user)
     .withCredentials() // The .withCredentials() method enables the ability to send cookies from the origin
