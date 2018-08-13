@@ -31,6 +31,7 @@ export const userLogin = user => (store) => {
     .auth(user.username, user.password)
     .withCredentials()
     .then((response) => {
+      console.log(response.body.token);
       return store.dispatch(setToken(response.body.token));
     });
 };
